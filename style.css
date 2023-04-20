@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+
+    --font-family-epilogue: 'Epilogue', sans-serif;
+    --font-size-body: 1.6rem;
+    --font-size-heading: 4rem;
+    
+    --color-hue-purple-blue: 250;
+    --color-purple-1: hsl(var(--color-hue-purple-blue), 22%, 20%);
+    --color-purple-2: hsl(var(--color-hue-purple-blue), 50%, 80%);
+    --color-blue-1: hsl(var(--color-hue-purple-blue), 100%, 11%, 1);
+    --color-white-1: #ffffff;
+}
+
+body {
+    font-family: var(--font-family-epilogue);
+    font-size: var(--font-size-body);
+    color: var(--color-white-1);
+    background-color: var(--color-purple-1);
+}
+
+main {
+    display: grid;
+    gap: 3.2rem;
+}
+
+.container {
+    max-width: 33rem;
+    margin: auto;
+}
+
+img {
+    width: 100%;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    margin: 10rem 0 8rem;
+}
+
+header p {
+    font-weight: 400;
+    text-transform: uppercase;
+    line-height: 3.2rem;
+    letter-spacing: 3px;
+    color: var(--color-purple-2);
+    margin-bottom: 1.7rem;
+}
+
+header h1 {
+    font-size: var(--font-size-heading);
+    font-weight: 800;
+    line-height: 4.8rem;
+}
+
+.card {
+    position: relative;
+}
+
+.card img {
+    height: 41.6rem;
+    object-fit: cover;
+    border-radius: 6px;
+    opacity: 0.7;
+    transition: all 0.3s;
+}
+
+.card img:hover {
+    transform: scale(1.05);
+    opacity: 0.4;
+}
+
+.card h2 {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    font-size: var(--font-size-heading);
+    font-weight: 800;
+    position: absolute;
+    bottom: 5.2rem;
+    left: 2.8rem;
+}
+
+.card h2 span {
+    display: inline-flex;
+    align-items: center;
+    font-size: var(--font-size-body);
+    font-weight: 400;
+    color: var(--color-blue-1);
+    background-color: var(--color-white-1);
+    border-radius: 2rem;
+    padding: 0 1.6rem;
+    height: 3.8rem;
+    width: fit-content;
+}
