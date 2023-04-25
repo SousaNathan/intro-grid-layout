@@ -43,7 +43,21 @@ img {
 header {
     text-align: center;
     margin: 10rem 0 8rem;
+    animation: topdown 700ms;
+
+    /* animation-name: topdown;
+    animation-duration: 700ms;
+    animation-fill-mode: forwards;
+    animation-direction: reverse;
+    animation-delay: 200ms;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+    animation-play-state: paused; */
 }
+
+/* header:hover {
+    animation-play-state: running;
+} */
 
 header p {
     font-weight: 400;
@@ -58,6 +72,10 @@ header h1 {
     font-size: var(--font-size-heading);
     font-weight: 800;
     line-height: 4.8rem;
+}
+
+main {
+    animation: downtop 700ms 350ms backwards;
 }
 
 .card {
@@ -99,4 +117,28 @@ header h1 {
     padding: 0 1.6rem;
     height: 3.8rem;
     width: fit-content;
+}
+
+@keyframes topdown {
+    0% {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes downtop {
+    0% {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
