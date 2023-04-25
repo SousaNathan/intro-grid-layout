@@ -25,11 +25,6 @@ body {
     background-color: var(--color-purple-1);
 }
 
-main {
-    display: grid;
-    gap: 3.2rem;
-}
-
 .container {
     max-width: 33rem;
     margin: auto;
@@ -75,6 +70,8 @@ header h1 {
 }
 
 main {
+    display: grid;
+    gap: 3.2rem;
     animation: downtop 700ms 350ms backwards;
 }
 
@@ -99,7 +96,7 @@ main {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    font-size: var(--font-size-heading);
+    font-size: 4rem;
     font-weight: 800;
     position: absolute;
     bottom: 5.2rem;
@@ -140,5 +137,54 @@ main {
     100% {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@media (min-width: 700px) {
+
+    .container {
+        max-width: 117rem;
+        padding: 0 5rem;
+    }
+
+}
+
+@media (min-width: 795px) {
+
+    :root {
+        --font-size-heading: 5.6rem;
+    }
+
+    .container {
+        max-width: 117rem;
+        padding: 0 5rem;
+    }
+
+    main {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 930px) {
+
+    main {
+        grid-template-areas: "A B B"
+                             "C C D";
+    }
+
+    main div:nth-child(1) {
+        grid-area: A;
+    }
+
+    main div:nth-child(2) {
+        grid-area: B;
+    }
+
+    main div:nth-child(3) {
+        grid-area: C;
+    }
+
+    main div:nth-child(4) {
+        grid-area: D;
     }
 }
